@@ -155,7 +155,9 @@ const defaults: Config = {
   captureFrameQuality: 0.95,
   captureFrameFileNameFormat: 'timestamp',
   enableNativeHevc: true,
-  enableUpdateCheck: true,
+  // disable checking for updates by default
+  // dont "phone home" to github.com
+  enableUpdateCheck: false,
   cleanupChoices: {
     trashTmpFiles: true, askForCleanup: true, closeFile: true, cleanupAfterExport: false,
   },

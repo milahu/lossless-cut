@@ -403,6 +403,10 @@ async function init() {
 
     const enableUpdateCheck = configStore.get('enableUpdateCheck');
 
+    // remove checking for updates
+    // dont "phone home" to github.com
+    // setting `enableUpdateCheck: false` in configStore.ts seems to have no effect
+    return; // done init
     if (!disableNetworking && enableUpdateCheck && !isStoreBuild) {
       newVersion = await checkNewVersion();
       // newVersion = '1.2.3';
