@@ -8,6 +8,10 @@ import { isMasBuild } from './util';
 
 
 export async function loadMifiLink() {
+  // remove propaganda
+  // dont "phone home" to mifi.no
+  // fix https://github.com/mifi/lossless-cut/issues/1055
+  return undefined;
   try {
     // In old versions: https://mifi.no/losslesscut/config.json
     return await ky('https://losslesscut.mifi.no/config.json').json();
